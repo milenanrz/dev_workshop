@@ -267,6 +267,7 @@ class Geometria:
         Returns:
             float: Área de la superficie del cilindro
         """
+
         return (2*3.1416*radio*altura) + (2*3.1416*(radio)**2)
         pass
     
@@ -283,8 +284,9 @@ class Geometria:
         Returns:
             float: Distancia entre los dos puntos
         """
-        from math import sqrt
-        return sqrt(((x2)-(x1))**2+((y2)-(y1))**2)
+        import math
+        distanciaEntrePuntos = math.sqrt ((x2-x1)**2 + (y2-y1)**2)
+        return distanciaEntrePuntos
         pass
     
     def punto_medio(self, x1, y1, x2, y2):
@@ -332,7 +334,10 @@ class Geometria:
         Returns:
             tuple: Coeficientes (A, B, C) de la ecuación de la recta
         """
-
+        A = y2 - y1
+        B = x1 - x2
+        C =  x2 * y1 - x1 * y2
+        return A, B, C
         pass
     
     def area_poligono_regular(self, num_lados, lado, apotema):
@@ -347,7 +352,8 @@ class Geometria:
         Returns:
             float: Área del polígono regular
         """
-        return ((num_lados*lado)*apotema)/2
+        perimetro = num_lados * lado
+        return (perimetro*apotema)/2
         pass
     
     def perimetro_poligono_regular(self, num_lados, lado):
