@@ -28,6 +28,7 @@ class Geometria:
         Returns:
             float: Perímetro del rectángulo
         """
+        return 2*base+2*altura
         pass
     
     def area_circulo(self, radio):
@@ -40,6 +41,7 @@ class Geometria:
         Returns:
             float: Área del círculo
         """
+        return 3.1416 * (radio*radio)
         pass
     
     def perimetro_circulo(self, radio):
@@ -52,6 +54,7 @@ class Geometria:
         Returns:
             float: Perímetro del círculo
         """
+        return 2*3.1416*radio
         pass
     
     def area_triangulo(self, base, altura):
@@ -65,6 +68,7 @@ class Geometria:
         Returns:
             float: Área del triángulo
         """
+        return (base*altura)/2
         pass
     
     def perimetro_triangulo(self, lado1, lado2, lado3):
@@ -79,6 +83,7 @@ class Geometria:
         Returns:
             float: Perímetro del triángulo
         """
+        return lado1+lado2+lado3
         pass
     
     def es_triangulo_valido(self, lado1, lado2, lado3):
@@ -95,6 +100,7 @@ class Geometria:
         Returns:
             bool: True si los lados pueden formar un triángulo, False en caso contrario
         """
+        
         pass
     
     def area_trapecio(self, base_mayor, base_menor, altura):
@@ -109,6 +115,7 @@ class Geometria:
         Returns:
             float: Área del trapecio
         """
+        return (base_menor+base_mayor)*altura/2
         pass
     
     def area_rombo(self, diagonal_mayor, diagonal_menor):
@@ -122,6 +129,7 @@ class Geometria:
         Returns:
             float: Área del rombo
         """
+        return (diagonal_mayor*diagonal_menor)/2
         pass
     
     def area_pentagono_regular(self, lado, apotema):
@@ -135,6 +143,7 @@ class Geometria:
         Returns:
             float: Área del pentágono regular
         """
+        return ((5*lado)*apotema)/2
         pass
     
     def perimetro_pentagono_regular(self, lado):
@@ -147,6 +156,7 @@ class Geometria:
         Returns:
             float: Perímetro del pentágono regular
         """
+        return 5*lado
         pass
     
     def area_hexagono_regular(self, lado, apotema):
@@ -160,6 +170,7 @@ class Geometria:
         Returns:
             float: Área del hexágono regular
         """
+        return lado*3*apotema
         pass
     
     def perimetro_hexagono_regular(self, lado):
