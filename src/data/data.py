@@ -14,6 +14,12 @@ class Data:
         Returns:
             list: Lista con los elementos en orden inverso
         """
+        listaInvertida = []
+        indice = len(lista) - 1
+        while indice >= 0:
+            listaInvertida.append(lista[indice])
+            indice -= 1
+        return listaInvertida
         pass
     
     def buscar_elemento(self, lista, elemento):
@@ -41,6 +47,7 @@ class Data:
         Returns:
             list: Lista sin elementos duplicados
         """
+    
         pass
     
     def merge_ordenado(self, lista1, lista2):
@@ -54,6 +61,7 @@ class Data:
         Returns:
             list: Lista combinada y ordenada
         """
+        
         pass
     
     def rotar_lista(self, lista, k):
