@@ -14,6 +14,7 @@ class Logica:
         Returns:
             bool: Resultado de a AND b
         """
+        return a & b #multiplicacion logica
         pass
     
     def OR(self, a, b):
@@ -27,6 +28,7 @@ class Logica:
         Returns:
             bool: Resultado de a OR b
         """
+        return a | b #suma logica
         pass
     
     def NOT(self, a):
@@ -39,6 +41,7 @@ class Logica:
         Returns:
             bool: Resultado de NOT a
         """
+        return not a 
         pass
     
     def XOR(self, a, b):
@@ -52,6 +55,7 @@ class Logica:
         Returns:
             bool: Resultado de a XOR b
         """
+        return a ^ b
         pass
     
     def NAND(self, a, b):
@@ -65,6 +69,10 @@ class Logica:
         Returns:
             bool: Resultado de a NAND b
         """
+        if a == 1 and b == 1:
+            return False
+        else:
+            return True
         pass
     
     def NOR(self, a, b):
@@ -78,6 +86,14 @@ class Logica:
         Returns:
             bool: Resultado de a NOR b
         """
+        if(a == False) and (b == False):
+            return True
+        elif(a == False) and (b == True):
+            return False
+        elif(a == True) and (b == False):
+            return False
+        elif(a == True) and (b == True):
+            return False
         pass
     
     def XNOR(self, a, b):
@@ -91,6 +107,10 @@ class Logica:
         Returns:
             bool: Resultado de a XNOR b
         """
+        if(a == b):
+            return True
+        else:
+            return False
         pass
     
     def implicacion(self, a, b):
@@ -104,6 +124,7 @@ class Logica:
         Returns:
             bool: Resultado de la implicación
         """
+        return not a or b
         pass
     
     def bi_implicacion(self, a, b):
@@ -117,6 +138,7 @@ class Logica:
         Returns:
             bool: Resultado de la bi-implicación
         """
+        return a == b 
         pass
     
     
