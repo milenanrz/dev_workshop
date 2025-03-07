@@ -1,9 +1,9 @@
+import math
 class Geometria:
     """
     Class with geometric exercises.
     Include basic and funny operations in 2D and 3D.
     """
-    import math
     
     def area_rectangulo(self, base, altura):
         """
@@ -42,7 +42,7 @@ class Geometria:
         Returns:
             float: Área del círculo
         """
-        return 3.1416 * (radio*radio)
+        return math.pi * (radio)**2
         pass
     
     def perimetro_circulo(self, radio):
@@ -55,7 +55,7 @@ class Geometria:
         Returns:
             float: Perímetro del círculo
         """
-        return 2*3.1416*radio
+        return 2*math.pi*radio
         pass
     
     def area_triangulo(self, base, altura):
@@ -200,7 +200,7 @@ class Geometria:
         Returns:
             float: Volumen del cubo
         """
-        return lado*lado*lado
+        return lado**3
         pass
     
     def area_superficie_cubo(self, lado):
@@ -213,7 +213,7 @@ class Geometria:
         Returns:
             float: Área de la superficie del cubo
         """
-        return 6*(lado*lado)
+        return 6*(lado)**2
         pass
     
     def volumen_esfera(self, radio):
@@ -226,7 +226,7 @@ class Geometria:
         Returns:
             float: Volumen de la esfera
         """
-        return 4/3*3.1416*(radio*radio*radio)
+        return 4/3*math.pi*(radio)**3
         pass
     
     def area_superficie_esfera(self, radio):
@@ -239,7 +239,7 @@ class Geometria:
         Returns:
             float: Área de la superficie de la esfera
         """
-        return 4*3.1416*(radio*radio)
+        return 4*math.pi*(radio)**2
         pass
     
     def volumen_cilindro(self, radio, altura):
@@ -253,7 +253,7 @@ class Geometria:
         Returns:
             float: Volumen del cilindro
         """
-        return 3.1416*(radio*radio)*altura
+        return math.pi*(radio**2)*altura
         pass
     
     def area_superficie_cilindro(self, radio, altura):
@@ -268,7 +268,7 @@ class Geometria:
             float: Área de la superficie del cilindro
         """
 
-        return (2*3.1416*radio*altura) + (2*3.1416*(radio)**2)
+        return (2*math.pi*radio*altura) + (2*math.pi*(radio)**2)
         pass
     
     def distancia_entre_puntos(self, x1, y1, x2, y2):
@@ -284,9 +284,7 @@ class Geometria:
         Returns:
             float: Distancia entre los dos puntos
         """
-        import math
-        distanciaEntrePuntos = math.sqrt ((x2-x1)**2 + (y2-y1)**2)
-        return distanciaEntrePuntos
+        return round(math.sqrt ((x2-x1)**2 + (y2-y1)**2), 2)
         pass
     
     def punto_medio(self, x1, y1, x2, y2):
@@ -352,8 +350,7 @@ class Geometria:
         Returns:
             float: Área del polígono regular
         """
-        perimetro = num_lados * lado
-        return (perimetro*apotema)/2
+        return round((num_lados*lado*apotema)/2, 2)
         pass
     
     def perimetro_poligono_regular(self, num_lados, lado):
