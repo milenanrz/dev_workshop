@@ -334,8 +334,8 @@ class Geometria:
         """
         A = y2 - y1
         B = x1 - x2
-        C =  x2 * y1 - x1 * y2
-        return A, B, C
+        C = x2 * y1 - x1 * y2
+        return (A, B, C)
         pass
     
     def area_poligono_regular(self, num_lados, lado, apotema):
